@@ -33,17 +33,26 @@ export default function RoomCard({
   const [showBedControls, setShowBedControls] = useState(false);
 
   const handleIncrementBeds = () => {
-    setBedCount(prev => prev + 1);
+    const newCount = bedCount + 1;
+    setBedCount(newCount);
+    // Update summary immediately
+    onAddRoom({ title, price, nights, quantity: newCount });
   };
 
   const handleDecrementBeds = () => {
-    setBedCount(prev => Math.max(1, prev - 1));
+    const newCount = Math.max(1, bedCount - 1);
+    setBedCount(newCount);
+    // Update summary immediately
+    onAddRoom({ title, price, nights, quantity: newCount });
   };
 
   const handleAddRoom = () => {
     if (!showBedControls) {
+      // First click: show controls AND add 1 bed to summary
       setShowBedControls(true);
+      onAddRoom({ title, price, nights, quantity: 1 });
     } else {
+      // This shouldn't be called since we'll handle updates via +/- buttons
       onAddRoom({ title, price, nights, quantity: bedCount });
     }
   };
@@ -189,43 +198,34 @@ export default function RoomCard({
           </div>
           <div className="flex items-center gap-3 h-[32px]">
             {showBedControls ? (
-              <>
-                {/* Bed Quantity Selector */}
-                <div className="flex items-center gap-2">
-                  <span className="text-sm text-gray-600">Beds:</span>
-                  <div className="flex items-center border border-gray-300 rounded-lg">
-                    <button
-                      onClick={handleDecrementBeds}
-                      disabled={bedCount <= 1}
-                      className="flex items-center justify-center w-7 h-7 text-gray-600 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed rounded-l-lg"
-                    >
-                      <Minus size={14} />
-                    </button>
-                    <span className="flex items-center justify-center w-10 h-7 text-sm font-medium bg-gray-50">
-                      {bedCount}
-                    </span>
-                    <button
-                      onClick={handleIncrementBeds}
-                      className="flex items-center justify-center w-7 h-7 text-gray-600 hover:bg-gray-100 rounded-r-lg"
-                    >
-                      <Plus size={14} />
-                    </button>
-                  </div>
+              /* Bed Quantity Selector */
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-gray-600">Beds:</span>
+                <div className="flex items-center border border-gray-300 rounded-lg">
+                  <button
+                    onClick={handleDecrementBeds}
+                    disabled={bedCount <= 1}
+                    className="flex items-center justify-center w-7 h-7 text-gray-600 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed rounded-l-lg"
+                  >
+                    <Minus size={14} />
+                  </button>
+                  <span className="flex items-center justify-center w-10 h-7 text-sm font-medium bg-gray-50">
+                    {bedCount}
+                  </span>
+                  <button
+                    onClick={handleIncrementBeds}
+                    className="flex items-center justify-center w-7 h-7 text-gray-600 hover:bg-gray-100 rounded-r-lg"
+                  >
+                    <Plus size={14} />
+                  </button>
                 </div>
-                
-                <button
-                  onClick={handleAddRoom}
-                  className="flex items-center justify-center gap-2 rounded-[12px] border border-[rgba(255,51,102,0.10)] px-3 py-2 shadow-[0_2px_8px_0_rgba(0,0,0,0.10)] text-[14px] text-white h-[32px] bg-[linear-gradient(99deg,#F36_8.96%,#FF1A53_99.91%)]"
-                >
-                  Add Room
-                </button>
-              </>
+              </div>
             ) : (
               <button
                 onClick={handleAddRoom}
                 className="flex items-center justify-center gap-2 rounded-[12px] border border-[rgba(255,51,102,0.10)] px-3 py-2 shadow-[0_2px_8px_0_rgba(0,0,0,0.10)] text-[14px] text-white h-[32px] bg-[linear-gradient(99deg,#F36_8.96%,#FF1A53_99.91%)]"
               >
-                Add
+                Add Bed
               </button>
             )}
           </div>

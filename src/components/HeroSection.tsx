@@ -23,7 +23,7 @@ export default function HeroSection({ onGalleryClick }: HeroSectionProps) {
             Trusted by 200+ Users
           </div>
           <img
-            src="/images/103_Reception_01_sTjS43W.webp"
+            src="/images/098_Exterior_02_5ZQZyH0.webp"
             alt="Hostel exterior"
             className="w-full h-full object-cover"
             onError={(e) => {
@@ -40,7 +40,7 @@ export default function HeroSection({ onGalleryClick }: HeroSectionProps) {
         <div className="grid grid-cols-2 gap-4">
           <div className="rounded-lg overflow-hidden" style={{ height: '290px' }}>
             <img
-              src="/src/assets/images/room-1.jpg"
+              src="/images/103_Reception_01_sTjS43W.webp"
               alt="Hostel interior 1"
               className="w-full h-full object-cover"
               onError={(e) => {
@@ -50,7 +50,7 @@ export default function HeroSection({ onGalleryClick }: HeroSectionProps) {
           </div>
           <div className="rounded-lg overflow-hidden" style={{ height: '290px' }}>
             <img
-              src="/images/103_Reception_01_sTjS43W.webp"
+              src="/images/026_CommonArea_05_IeUYlfq.webp"
               alt="Hostel interior 2"
               className="w-full h-full object-cover"
               onError={(e) => {
@@ -60,7 +60,7 @@ export default function HeroSection({ onGalleryClick }: HeroSectionProps) {
           </div>
           <div className="rounded-lg overflow-hidden" style={{ height: '290px' }}>
             <img
-              src="/images/103_Reception_01_sTjS43W.webp"
+              src="/images/072_CommonArea_35_WbBJ8V0.webp"
               alt="Hostel interior 3"
               className="w-full h-full object-cover"
               onError={(e) => {
@@ -70,7 +70,7 @@ export default function HeroSection({ onGalleryClick }: HeroSectionProps) {
           </div>
           <div className="rounded-lg overflow-hidden relative" style={{ height: '290px' }}>
             <img
-              src="/src/assets/images/room-4.jpg"
+              src="/images/073_CommonArea_36_qpEfO43.webp"
               alt="Hostel interior 4"
               className="w-full h-full object-cover"
               onError={(e) => {

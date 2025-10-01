@@ -32,8 +32,17 @@ export default function Summary({ selectedRoom, checkIn, checkOut, guests, onRem
           <>
             <h3 className="text-xl font-bold text-gray-900 mb-4">Summary</h3>
             <div className="flex flex-col items-center justify-center py-12">
-              <div className="w-24 h-24 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: '#ffe6ef' }}>
-                <span className="text-4xl">🛏️</span>
+              <div className="w-24 h-24 rounded-full overflow-hidden flex items-center justify-center mb-4" style={{ backgroundColor: '#ffe6ef' }}>
+                <img 
+                  src="/images/SummarY.webp" 
+                  alt="Hotel Room" 
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                  }}
+                />
+                <span className="text-4xl hidden">🛏️</span>
               </div>
               <p className="text-gray-500 text-center text-sm">
                 Select a bed to get your stay summary here.

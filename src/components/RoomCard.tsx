@@ -86,7 +86,7 @@ export default function RoomCard({
             className="w-full h-full object-cover rounded-[8px] md:rounded-l-[12px] md:rounded-r-none cursor-pointer"
             style={{ minHeight: '250px' }}
             onError={(e) => {
-              e.currentTarget.src = '/api/placeholder/400/300';
+              e.currentTarget.src = '/images/44913_20250317071142_0217849001742195502_896_1.jpg';
             }}
           />
           <div className="absolute bottom-2 right-2 inline-flex items-center gap-1 rounded-[12px] bg-white/90 shadow-[0_4px_8px_0_rgba(70,69,70,0.25)] px-2 py-1">

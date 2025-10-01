@@ -32,7 +32,7 @@ function App() {
       price: 517.86,
       originalPrice: 959,
       maxAdults: 1,
-      image: '/src/assets/images/dorm-room.jpg',
+      image: '/images/44913_20250317071142_0217849001742195502_896_1.jpg',
       imageCount: 8,
       amenities: [
         'Shared or Ensuite Bathroom (As per room category reserved)',
@@ -48,7 +48,7 @@ function App() {
       price: 1423.98,
       originalPrice: 2637,
       maxAdults: 2,
-      image: '/src/assets/images/deluxe-room.jpg',
+      image: '/images/44913_20250317070818_0774822001742195298_951_1.jpg',
       imageCount: 7,
       amenities: [
         'Ensuite or Private Bathroom (As per room category reserved)',

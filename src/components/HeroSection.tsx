@@ -98,11 +98,11 @@ export default function HeroSection({ onGalleryClick }: HeroSectionProps) {
             <span className="text-sm">754/L-185, HSR Layout, Sector 6, behind Silkboard bus stand, Outer Ring road, Bengaluru - 560102</span>
           </div>
           <div className="flex flex-wrap gap-3 mt-4">
-            <div className="flex items-center space-x-2 text-sm" style={{ color: '#ff1a53' }}>
+            <div className="flex items-center space-x-2 text-sm" style={{ color: '#5F37D5' }}>
               <Award size={16} />
               <span>Booked by 200+ this week</span>
             </div>
-            <div className="flex items-center space-x-2 text-sm" style={{ color: '#ff1a53' }}>
+            <div className="flex items-center space-x-2 text-sm" style={{ color: '#5F37D5' }}>
               <Award size={16} />
               <span>Perfect for Stay Near HSR Startup Scene</span>
             </div>
